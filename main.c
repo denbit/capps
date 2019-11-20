@@ -15,15 +15,19 @@
 #include <stdlib.h>
 #include <string.h>
 #include "register_var.h"
+#include "pointers.h"
+#include "strings.h"
 
 /*
  * 
  */
 int main(int argc, char** argv) {
     
-    const short module_l = 1;
+    const short module_l = 3;
    const char modules[][20] = {
-       {"register_var"}
+       {"register_var"},
+       {"pointers"},
+       {"strings"}
    };
     char opt;
     while (module_l>0&&opt!='0'){
@@ -37,7 +41,14 @@ int main(int argc, char** argv) {
             case '1': 
                 register_var_test();
                 break;
-            default:   puts("For exit press 0");
+            case '2':
+                pointers_test();
+                break;
+            case '3':
+                strings_test();
+                break;
+            default:
+                puts("For exit press 0");
         }
         puts("Success\n");
     }
