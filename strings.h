@@ -17,4 +17,5 @@
 #define SIZE 50
 #endif
 void strings_test(void);
+char * itoa(int);
 #endif /* STRINGS_H */
