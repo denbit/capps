@@ -25,14 +25,18 @@ void strings_test(void){
     puts(source);
     if( trim == 0  || strlen(source) < trim){
        strcpy(dest, source);
-        puts(dest);
+        puts(dest);        
     } else {
         strncpy(dest, source, trim);
        // dest[trim]='\0';
         puts(dest);
         printf("trimmed to size %d\n",trim);
     }
-   
+    puts("testing concat");
+    strcat(dest,source);
+    printf(" result is %50s\n", dest);
+     strncat(dest,source+1,strlen(source)-2);
+    printf(" result is %50s\n", dest);
   
     
 }

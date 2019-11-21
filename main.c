@@ -35,8 +35,10 @@ int main(int argc, char** argv) {
         for(short i=0;i<module_l;i++){
             printf("%d) %s;\n",(i+1),modules[i]);
         }
-        opt = getchar();
-        getchar();
+     //   char chouse[]={opt};
+    //    puts(chouse);
+         
+        scanf(" %c",&opt);
         switch(opt){
             case '1': 
                 register_var_test();
