@@ -18,6 +18,7 @@
 void call(int (*func)(char *), char* text){
     func(text);
 }
+
 void pointers_test(void){
     /* int pointers*/
     puts("--------------------------\n\n");
